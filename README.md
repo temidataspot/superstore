@@ -15,7 +15,7 @@
 
 ## Project Overview
 
-This project delivers a **complete customer intelligence pipeline** on the Superstore retail dataset — moving from raw transaction data to actionable business strategy across three industry-standard analyses:
+This project delivers a **complete customer intelligence pipeline** on the Superstore retail dataset, moving from raw transaction data to actionable business strategy across three industry-standard analyses:
 
 | Analysis | Method | Output |
 |---|---|---|
@@ -23,7 +23,7 @@ This project delivers a **complete customer intelligence pipeline** on the Super
 | **LTV Prediction** | BG/NBD + Gamma-Gamma | 12-month revenue forecast per customer |
 | **Cohort Retention** | Cohort Heatmap | Monthly retention rates across 42 cohorts |
 
-The project is deployed as a **live Streamlit app** that accepts any transaction CSV — making it dataset-agnostic and production-ready.
+The project is deployed as a **live Streamlit app** that accepts any transaction CSV, making it dataset-agnostic and production-ready.
 
 ---
 
@@ -47,7 +47,7 @@ The project is deployed as a **live Streamlit app** that accepts any transaction
 
 ### Key Findings
 
-- **Peak month: November** — pre-holiday demand drives highest monthly revenue
+- **Peak month: November** - pre-holiday demand drives highest monthly revenue
 - **YoY growth:** -2.8% (2014→2015) then recovery to +29.5% (2015→2016) and +20.4% (2016→2017)
 - **Technology** is the highest-revenue category; **Furniture** the lowest despite high order values
 - **Consumer segment** drives the most volume; **Corporate** has the highest avg order value
@@ -63,15 +63,15 @@ The project is deployed as a **live Streamlit app** that accepts any transaction
 
 ---
 
-##  RFM Segmentation — K-Means Clustering
+##  RFM Segmentation: K-Means Clustering
 
 ### Why K-Means over Manual Scoring?
 
-Traditional RFM assigns manual 1–5 scores — subjective and arbitrary. K-Means **discovers natural groupings** in the data automatically, finding the boundaries that actually exist rather than imposing artificial ones.
+Traditional RFM assigns manual 1–5 scores; subjective and arbitrary. K-Means **discovers natural groupings** in the data automatically, finding the boundaries that actually exist rather than imposing artificial ones.
 
 ### Finding Optimal K
 
-Silhouette Score analysis identified **K=2** as the natural structure in this dataset — two genuinely distinct customer populations rather than forced multi-segment splits.
+Silhouette Score analysis identified **K=2** as the natural structure in this dataset, two genuinely distinct customer populations rather than forced multi-segment splits.
 
 ### Results
 
@@ -82,17 +82,17 @@ Silhouette Score analysis identified **K=2** as the natural structure in this da
 
 ### Interpretation
 
-**Champions (72.6%)** purchased recently, buy frequently and spend the most — these are your most valuable customers. They spend **3.6× more** than Loyal Customers and buy **twice as often**.
+**Champions (72.6%)** purchased recently, buy frequently and spend the most; these are the most valuable customers. They spend **3.6× more** than Loyal Customers and buy **twice as often**.
 
-**Loyal Customers (27.4%)** are historically engaged but haven't purchased in ~10 months on average — they are at risk of churning and represent a significant win-back opportunity.
+**Loyal Customers (27.4%)** are historically engaged but haven't purchased in ~10 months on average, they are at risk of churning and represent a significant win-back opportunity.
 
 ---
 
-##  LTV Prediction — BG/NBD + Gamma-Gamma
+##  LTV Prediction: BG/NBD + Gamma-Gamma
 
 ### Why This Approach?
 
-> Standard ML regression struggles with LTV because transaction data is inherently skewed and non-linear. The **BG/NBD + Gamma-Gamma** probabilistic model is purpose-built for non-contractual customer transactions — it's the same framework used by **Amazon, Netflix and Spotify** in production.
+> Standard ML regression struggles with LTV because transaction data is inherently skewed and non-linear. The **BG/NBD + Gamma-Gamma** probabilistic model is purpose-built for non-contractual customer transactions, it's the same framework used by **Amazon, Netflix and Spotify** in production.
 
 ### How It Works
 
@@ -133,11 +133,11 @@ Combined:
 | **Champions** | 576 | **$859.18** |
 | **Loyal Customers** | 217 | $343.23 |
 
-Champions are predicted to generate **2.5× more revenue** over the next 12 months than Loyal Customers — directly informing where to concentrate retention and upsell investment.
+Champions are predicted to generate **2.5× more revenue** over the next 12 months than Loyal Customers, directly informing where to concentrate retention and upsell investment.
 
 ### Model Limitation
 
-`prob_alive = 100%` across all customers is expected for this dataset. The Superstore spans only 4 years — insufficient for the BG/NBD model to observe customer "death" (permanent churn). In production, denser transaction history (5+ years) significantly improves this estimate. LTV and purchase forecasts remain valid.
+`prob_alive = 100%` across all customers is expected for this dataset. The Superstore spans only 4 years, insufficient for the BG/NBD model to observe customer "death" (permanent churn). In production, denser transaction history (5+ years) significantly improves this estimate. LTV and purchase forecasts remain valid.
 
 ---
 
@@ -169,7 +169,7 @@ The **Month 1 drop-off from 100% → 12%** is the single most important business
 
 ---
 
-## 💼 Business Recommendations
+## Business Recommendations
 
 ### By Segment
 
@@ -180,9 +180,9 @@ The **Month 1 drop-off from 100% → 12%** is the single most important business
 
 ### Retention Strategy
 
-- **Day 14 post-purchase email** — personalised product recommendations based on first order
-- **30-day second purchase incentive** — customers who buy twice within 30 days have 3× higher 12M LTV
-- **Segment-based CAC cap** — acquisition cost should not exceed 20–25% of predicted LTV per segment
+- **Day 14 post-purchase email**: personalised product recommendations based on first order
+- **30-day second purchase incentive**: customers who buy twice within 30 days have 3× higher 12M LTV
+- **Segment-based CAC cap**: acquisition cost should not exceed 20–25% of predicted LTV per segment
 
 ### LTV-Based Budget Allocation
 
@@ -191,7 +191,7 @@ Champions  ($859 avg LTV)  →  Justify up to $172–$215 CAC
 Loyal      ($343 avg LTV)  →  Justify up to $69–$86 CAC
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Tool | Purpose |
 |---|---|
@@ -207,7 +207,7 @@ Loyal      ($343 avg LTV)  →  Justify up to $69–$86 CAC
 
 ---
 
-| Coming Soon — Attribution Modelling | Multi-touch attribution + A/B testing |
+| Coming Soon: Attribution Modelling | Multi-touch attribution + A/B testing |
 
 ---
 
