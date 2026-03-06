@@ -7,8 +7,10 @@
 ![Lifetimes](https://img.shields.io/badge/Lifetimes-BG%2FNBD-38bdf8?style=flat)
 ![Plotly](https://img.shields.io/badge/Plotly-Interactive-3F4F75?style=flat&logo=plotly&logoColor=white)
 
-> **Live App →** [Marklytics](https://marklytic.streamlit.app/)  
-> **Notebook →** [Superstore_Analytics.ipynb](https://github.com/temidataspot/superstore/blob/main/Superstore.ipynb)  
+> **Dashboard →** [Superstore](https://temidataspot.github.io/superstore-dashboard/)
+> 
+> **Notebook →** [Superstore_Analytics.ipynb](https://github.com/temidataspot/superstore/blob/main/Superstore.ipynb)
+> 
 > **Dataset →** [Superstore Sales](https://github.com/temidataspot/superstore/blob/main/Sample%20-%20Superstore.csv)
 
 ---
