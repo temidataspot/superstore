@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: superstore_pipeline
+    volumes:
+      - ./models:/app/models
+      - ./outputs:/app/outputs
+    environment:
+      - PYTHONIOENCODING=UTF-8
+    command: python scheduler.py
+
+  scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: superstore_scheduler
+    volumes:
+      - ./models:/app/models
+      - ./outputs:/app/outputs
+    environment:
+      - PYTHONIOENCODING=UTF-8
+    command: >
+      sh -c "echo 'Scheduler running...' &&
+             while true; do
+               echo 'Running pipeline...' &&
+               python scheduler.py &&
+               echo 'Pipeline complete. Sleeping 30 days...' &&
+               sleep 2592000;
+             done"
+    restart: unless-stopped

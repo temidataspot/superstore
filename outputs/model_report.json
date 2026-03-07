@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-03-07T20:23:48.736365",
+  "trained_at": "2026-03-07T20:23:48.667713",
+  "eda": {
+    "total_revenue": 2297200.86,
+    "unique_customers": 793,
+    "total_orders": 5009,
+    "avg_order_value": 458.61,
+    "date_range": {
+      "start": "2014-01-03",
+      "end": "2017-12-30"
+    },
+    "top_category": "Technology",
+    "top_region": "West"
+  },
+  "ltv": {
+    "customers_modelled": 781,
+    "avg_ltv_12m": 723.75,
+    "median_ltv_12m": 574.64,
+    "top10_ltv_12m": 1450.82
+  },
+  "rfm": {
+    "optimal_k": 2
+  },
+  "model_artifacts": {
+    "kmeans_model.pkl": {
+      "exists": true,
+      "size_kb": 3.73
+    },
+    "rfm_scaler.pkl": {
+      "exists": true,
+      "size_kb": 0.63
+    },
+    "bgf_model.pkl": {
+      "exists": true,
+      "size_kb": 33.65
+    },
+    "ggf_model.pkl": {
+      "exists": true,
+      "size_kb": 20.45
+    }
+  },
+  "sanity_checks": {
+    "ltv_in_range": true,
+    "revenue_positive": true,
+    "min_customers": true,
+    "bgf_exists": true
+  },
+  "all_checks_passed": true
+}

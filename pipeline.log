@@ -1,0 +1,36 @@
+2026-03-07 18:55:40,361  INFO  =======================================================
+2026-03-07 18:55:40,361  INFO    SUPERSTORE PIPELINE STARTING
+2026-03-07 18:55:40,362  INFO    2026-03-07 18:55:40 UTC
+2026-03-07 18:55:40,362  INFO  =======================================================
+2026-03-07 18:55:40,362  INFO  
+ STEP 1/3 — TRAINING MODELS
+2026-03-07 18:55:44,014  ERROR  
+ PIPELINE FAILED: Can't get local object 'BetaGeoFitter.fit.<locals>.<lambda>'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\superstore\scheduler.py", line 41, in run_pipeline
+    df, rfm, ltv_sum, bgf, ggf, kmeans, scaler = train.run()
+                                                 ~~~~~~~~~^^
+  File "C:\Users\Administrator\superstore\pipeline\train.py", line 173, in run
+    ltv_sum, bgf, ggf           = train_ltv(df)
+                                  ~~~~~~~~~^^^^
+  File "C:\Users\Administrator\superstore\pipeline\train.py", line 144, in train_ltv
+    pickle.dump(bgf, f)
+    ~~~~~~~~~~~^^^^^^^^
+AttributeError: Can't get local object 'BetaGeoFitter.fit.<locals>.<lambda>'
+2026-03-07 19:10:26,864  INFO  =======================================================
+2026-03-07 19:10:26,864  INFO    SUPERSTORE PIPELINE STARTING
+2026-03-07 19:10:26,865  INFO    2026-03-07 19:10:26 UTC
+2026-03-07 19:10:26,865  INFO  =======================================================
+2026-03-07 19:10:26,865  INFO  
+ STEP 1/3 — TRAINING MODELS
+2026-03-07 19:10:29,834  INFO     Step 1 complete 
+2026-03-07 19:10:29,953  INFO  
+ STEP 3/3 — EXPORTING OUTPUTS
+2026-03-07 19:10:30,527  INFO     Step 3 complete 
+2026-03-07 19:10:30,527  INFO  
+=======================================================
+2026-03-07 19:10:30,530  INFO    Runtime: 3s
+2026-03-07 19:10:30,531  INFO    Checks passed: True
+2026-03-07 19:10:30,531  INFO    Avg LTV:  $723.75
+2026-03-07 19:10:30,531  INFO    Customers modelled: 781
+2026-03-07 19:10:30,532  INFO  =======================================================
